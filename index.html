@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Cosplay Meetups</title>
   <style>
     body {
@@ -16,6 +16,9 @@
     }
     .floating {
       position: absolute;
+      width: 180px; /* bigger images */
+      border-radius: 20px; /* rounded corners */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* subtle shadow */
       animation: float 6s ease-in-out infinite;
     }
     @keyframes float {
@@ -64,8 +67,18 @@
   <h1>✨ Submitted Cosplay Meetups ✨</h1>
 
   <!-- FLOATING IMAGES -->
-  <img src="https://m.media-amazon.com/images/M/MV5BMzE0ZDU1MzQtNTNlYS00YjNlLWE2ODktZmFmNDYzMTBlZTBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" width="100" class="floating" style="top: 80px; left: 30px;">
-  <img src="https://i.imgur.com/2DhmtJ4.png" width="100" class="floating" style="top: 140px; right: 40px;">
+  <img
+    src="https://m.media-amazon.com/images/M/MV5BMzE0ZDU1MzQtNTNlYS00YjNlLWE2ODktZmFmNDYzMTBlZTBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    class="floating"
+    style="top: 80px; left: 60px;"
+    alt="Floating Image Left"
+  />
+  <img
+    src="https://i.imgur.com/2DhmtJ4.png"
+    class="floating"
+    style="top: 140px; right: 60px;"
+    alt="Floating Image Right"
+  />
 
   <div class="card">
     <p>Check out some of the awesome meetups happening this year!</p>
@@ -74,12 +87,17 @@
   <div class="card">
     <h2>📋 Submit a Meetup</h2>
     <p>Want to host a cosplay meetup? Submit your idea here:</p>
-    <a href="https://www.animemagic.org/cosplay-meetups-registration" class="button">Submit Meetup</a>
+    <a href="https://www.animemagic.org/cosplay-meetups-registration" class="button"
+      >Submit Meetup</a
+    >
   </div>
 
   <div class="card info">
     <h2>📌 Meetup Leader Quick Guide</h2>
-    <p>If you submit a meetup, you're the leader. We'll schedule based on your availability and you're expected to lead the event.</p>
+    <p>
+      If you submit a meetup, you're the leader. We'll schedule based on your
+      availability and you're expected to lead the event.
+    </p>
     <ul>
       <li>Say your name, cosplay, and what meetup it is</li>
       <li>Explain rules and time limit (1 hour)</li>
