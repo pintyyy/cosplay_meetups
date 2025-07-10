@@ -2,9 +2,62 @@
 <html>
 <head>
   <title>Cosplay Meetups</title>
+  <style>
+    body {
+      background: #fef9f5;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .floating {
+      position: absolute;
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 20px auto;
+      max-width: 600px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    a.button {
+      display: inline-block;
+      background: #ff6b6b;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>✨ Cosplay Meetups ✨</h1>
-  <p>Can see community-submitted meetups (these are not confirmed, just submitted! </p>
+  <h1>✨ Approved Cosplay Meetups ✨</h1>
+
+  <div class="card">
+    <p>Check out some of the awesome meetups happening this year!</p>
+    <img src="https://i.imgur.com/YourImage.jpg" width="100" class="floating" style="top: 100px; left: 50px;">
+    <img src="https://i.imgur.com/YourImage2.jpg" width="100" class="floating" style="top: 150px; right: 80px;">
+  </div>
+
+  <div class="card">
+    <h2>📋 Submit a Meetup</h2>
+    <p>Want to host a cosplay meetup? Submit your idea here:</p>
+    <a href="https://yourformlink.com" class="button">Submit Meetup</a>
+  </div>
+
+  <div class="card">
+    <h2>📌 Info for Meetup Leaders</h2>
+    <p>Learn what's expected and how to lead a safe, fun meetup.</p>
+    <a href="https://linktoinfo.com" class="button">Read the Guidelines</a>
+  </div>
 </body>
 </html>
