@@ -49,13 +49,24 @@
       list-style: none;
       margin-top: 15px;
     }
-    .info li::before {
-      content: "✅ ";
-      margin-right: 8px;
-      color: #28a745;
-    }
     .info li {
       margin-bottom: 10px;
+      position: relative;
+      padding-left: 26px; /* space for checkmark */
+      font-style: normal; /* default normal */
+    }
+    /* Checkmark before each list item */
+    .info li::before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #28a745;
+      font-style: normal; /* keep checkmark normal */
+    }
+    /* Italic style for the specific li */
+    .info li.italic {
+      font-style: italic;
     }
     .info h2 {
       color: #ff6b6b;
@@ -98,14 +109,14 @@
       If you submit a meetup, you're the leader. We'll schedule based on your
       availability and you're expected to lead the event.
     </p>
-  <ul>
-  <li>Tips: </li>
-  <li>Have some photo categories planned ahead, specific to your fandom </li>
-  <li>Arrive a few minutes early at the location. When it's time to start, introduce yourself! </li>
-  <li><em>"Hi, my name is *your name* and I will be coordinating the *Insert Fandom here* Meetup today!"</em></li>
-  <li>Communicate there is a 1- hour time limit on the space, you will be going through some pre-selected photo categories, and there will be time at the end for more!</li>
-  <li>Be kind and include everyone!</li>
-</ul>
+    <ul>
+      <li>Tips: </li>
+      <li>Have some photo categories planned ahead, specific to your fandom </li>
+      <li>Arrive a few minutes early at the location. When it's time to start, introduce yourself! </li>
+      <li class="italic">"Hi, my name is *your name* and I will be coordinating the *Insert Fandom here* Meetup today!"</li>
+      <li>Communicate there is a 1- hour time limit on the space, you will be going through some pre-selected photo categories, and there will be time at the end for more!</li>
+      <li>Be kind and include everyone!</li>
+    </ul>
   </div>
 
 </body>
