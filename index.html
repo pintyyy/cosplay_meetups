@@ -6,34 +6,50 @@
   <style>
     body {
       background: #fef9f5;
-      font-family: sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 20px 220px; /* space for floating images */
+      position: relative;
     }
 
-    h1 {
+    .header-box {
+      background: linear-gradient(135deg, #ffe7ba, #b5f2ff);
+      border-radius: 24px;
+      padding: 40px 20px;
       text-align: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
       margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-box h1 {
       font-size: 2rem;
-      color: #333;
+      margin: 0;
+      color: #ff6b6b;
+      text-shadow: 1px 1px 0 #fff6f0;
     }
 
     .floating {
-      width: 180px;
+      position: fixed;
+      width: 200px;
+      height: auto;
       border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       animation: float 6s ease-in-out infinite;
+      z-index: 0;
     }
-
+    .floating.left {
+      top: 100px;
+      left: 20px;
+    }
+    .floating.right {
+      top: 140px;
+      right: 20px;
+    }
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-20px); }
-    }
-
-    .floating-container {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 30px;
     }
 
     .card {
@@ -43,15 +59,13 @@
       margin: 20px auto;
       max-width: 600px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .card.border-top {
-      border-top: 12px solid #ffe4b5; /* beachy border */
+      position: relative;
+      z-index: 1;
     }
 
     .card h2 {
-      color: #ff6b6b;
       text-align: center;
+      color: #ff6b6b;
     }
 
     .button {
@@ -64,10 +78,6 @@
       margin-top: 10px;
     }
 
-    .centered {
-      text-align: center;
-    }
-
     .info ul {
       padding-left: 0;
       list-style: none;
@@ -78,9 +88,11 @@
       margin-bottom: 10px;
       padding-left: 26px;
       position: relative;
+      font-style: normal;
     }
 
     .info li span {
+      position: relative;
       display: inline-block;
     }
 
@@ -90,6 +102,7 @@
       left: -26px;
       top: 0;
       color: #28a745;
+      font-style: normal;
     }
 
     .info li.no-check {
@@ -103,45 +116,47 @@
     .info li.no-check strong {
       font-weight: bold;
     }
-
-    .info h2 {
-      color: #ff6b6b;
-      text-align: center;
-    }
   </style>
 </head>
 <body>
 
-  <h1>AM! 2025</h1>
-  <h1>Submitted Cosplay Meetups</h1>
-
   <!-- FLOATING IMAGES -->
-  <div class="floating-container">
-    <img
-      src="https://m.media-amazon.com/images/M/MV5BMzE0ZDU1MzQtNTNlYS00YjNlLWE2ODktZmFmNDYzMTBlZTBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-      class="floating"
-      alt="Floating Left"
-    />
-    <img
-      src="https://img.tapimg.net/market/images/d7875dc78ff70a4df8ab341800490e19.jpg?imageMogr2/thumbnail/720x9999%3E/quality/80/format/jpg/interlace/1/ignore-error/1&t=1"
-      class="floating"
-      alt="Floating Right"
-    />
+  <img
+    src="https://m.media-amazon.com/images/M/MV5BMzE0ZDU1MzQtNTNlYS00YjNlLWE2ODktZmFmNDYzMTBlZTBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    class="floating left"
+    alt="Floating Image Left"
+  />
+  <img
+    src="https://img.tapimg.net/market/images/d7875dc78ff70a4df8ab341800490e19.jpg?imageMogr2/thumbnail/720x9999%3E/quality/80/format/jpg/interlace/1/ignore-error/1&t=1"
+    class="floating right"
+    alt="Floating Image Right"
+  />
+
+  <!-- BEACHY HEADER BOX -->
+  <div class="header-box">
+    <h1>✨ AM! 2025 ✨</h1>
+    <h1>✨ Submitted Cosplay Meetups ✨</h1>
   </div>
 
-  <div class="card border-top centered">
+  <!-- SUBMIT BOX -->
+  <div class="card">
     <h2>📋 Submit a Meetup</h2>
     <p>Want to host a cosplay meetup? Submit your idea here:</p>
     <a href="https://www.animemagic.org/cosplay-meetups-registration" class="button">Submit Meetup</a>
   </div>
 
+  <!-- GUIDE BOX -->
   <div class="card info">
     <h2>📌 Meetup Leader Quick Guide</h2>
     <p>If you submit a meetup, you're the leader. We'll schedule based on your availability and you're expected to lead the event.</p>
     <ul>
       <li class="no-check"><strong>Tips:</strong></li>
       <li><span>Have some photo categories planned ahead, specific to your fandom</span></li>
-      <li><span>Arrive a few minutes early at the location. When it's time to start, introduce yourself! <em>"Hi, my name is *your name* and I will be coordinating the *Insert Fandom here* Meetup today!"</em></span></li>
+      <li class="no-check">
+        <span>
+          Arrive a few minutes early at the location. When it's time to start, introduce yourself! <em>"Hi, my name is *your name* and I will be coordinating the *Insert Fandom here* Meetup today!"</em>
+        </span>
+      </li>
       <li><span>Communicate there is a 1-hour time limit on the space, you will be going through some pre-selected photo categories, and there will be time at the end for more!</span></li>
       <li><span>Be kind and include everyone!</span></li>
     </ul>
