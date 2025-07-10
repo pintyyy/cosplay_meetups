@@ -8,7 +8,8 @@
       background: #fef9f5;
       font-family: sans-serif;
       margin: 0;
-      padding: 20px 240px;
+      /* Add horizontal padding to avoid text under floating images */
+      padding: 20px 220px;
       position: relative;
     }
     h1 {
@@ -21,17 +22,19 @@
       border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       animation: float 6s ease-in-out infinite;
-      z-index: 10;
+      z-index: 0; /* behind content */
     }
     .floating.left {
       left: 20px;
       width: 180px;
+      max-width: 100%;
+      height: auto;
     }
     .floating.right {
       right: 20px;
-      width: auto;       /* allow original size */
-      max-width: 100%;   /* max width boundary */
-      height: auto;      /* keep aspect ratio */
+      max-width: 250px; /* caps size */
+      width: auto;
+      height: auto;
     }
     @keyframes float {
       0%, 100% { transform: translateY(0); }
@@ -45,7 +48,7 @@
       max-width: 600px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       position: relative;
-      z-index: 1;
+      z-index: 1; /* above images */
     }
     .card h2 {
       text-align: center;
@@ -129,18 +132,17 @@
       If you submit a meetup, you're the leader. We'll schedule based on your
       availability and you're expected to lead the event.
     </p>
-   <ul>
-  <li class="no-check"><strong>Tips:</strong></li>
-  <li><span>Have some photo categories planned ahead, specific to your fandom</span></li>
-  <li>
-    <span>
-      Arrive a few minutes early at the location. When it's time to start, introduce yourself! <em>"Hi, my name is *your name* and I will be coordinating the *Insert Fandom here* Meetup today!"</em>
-    </span>
-  </li>
-  <li><span>Communicate there is a 1- hour time limit on the space, you will be going through some pre-selected photo categories, and there will be time at the end for more!</span></li>
-  <li><span>Be kind and include everyone!</span></li>
-</ul>
-
+    <ul>
+      <li class="no-check"><strong>Tips:</strong></li>
+      <li><span>Have some photo categories planned ahead, specific to your fandom</span></li>
+      <li>
+        <span>
+          Arrive a few minutes early at the location. When it's time to start, introduce yourself! <em>"Hi, my name is *your name* and I will be coordinating the *Insert Fandom here* Meetup today!"</em>
+        </span>
+      </li>
+      <li><span>Communicate there is a 1- hour time limit on the space, you will be going through some pre-selected photo categories, and there will be time at the end for more!</span></li>
+      <li><span>Be kind and include everyone!</span></li>
+    </ul>
   </div>
 
 </body>
