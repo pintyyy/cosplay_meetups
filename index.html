@@ -8,28 +8,33 @@
       background: #fef9f5;
       font-family: sans-serif;
       margin: 0;
-      padding: 20px;
+      /* Add horizontal padding to leave space for floating images */
+      padding: 20px 240px;
+      position: relative;
     }
     h1 {
       text-align: center;
-      margin-bottom: 60px; /* increased for spacing */
-    }
-    .floating-container {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 40px;
       margin-bottom: 30px;
     }
     .floating {
+      position: fixed; /* fixed so images stay on sides */
+      top: 100px;
       border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      animation: float 6s ease-in-out infinite;
+      z-index: 10;
     }
     .floating.left {
+      left: 20px;
       width: 180px;
     }
     .floating.right {
+      right: 20px;
       width: 220px; /* bigger right image */
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
     }
     .card {
       background: white;
@@ -42,7 +47,7 @@
       z-index: 1;
     }
     .card h2 {
-      text-align: center; /* Center the titles inside cards */
+      text-align: center; /* Center card titles */
       color: #ff6b6b;
       margin-top: 0;
     }
@@ -87,6 +92,9 @@
     .info li.no-check strong {
       font-weight: bold;
     }
+    .info h2 {
+      color: #ff6b6b;
+    }
   </style>
 </head>
 <body>
@@ -94,18 +102,17 @@
   <h1>✨ AM! 2025 ✨</h1>
   <h1>✨ Submitted Cosplay Meetups ✨</h1>
 
-  <div class="floating-container">
-    <img
-      src="https://m.media-amazon.com/images/M/MV5BMzE0ZDU1MzQtNTNlYS00YjNlLWE2ODktZmFmNDYzMTBlZTBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-      class="floating left"
-      alt="Floating Image Left"
-    />
-    <img
-      src="https://img.tapimg.net/market/images/d7875dc78ff70a4df8ab341800490e19.jpg?imageMogr2/thumbnail/720x9999%3E/quality/80/format/jpg/interlace/1/ignore-error/1&t=1"
-      class="floating right"
-      alt="Floating Image Right"
-    />
-  </div>
+  <!-- FLOATING IMAGES -->
+  <img
+    src="https://m.media-amazon.com/images/M/MV5BMzE0ZDU1MzQtNTNlYS00YjNlLWE2ODktZmFmNDYzMTBlZTBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    class="floating left"
+    alt="Floating Image Left"
+  />
+  <img
+    src="https://img.tapimg.net/market/images/d7875dc78ff70a4df8ab341800490e19.jpg?imageMogr2/thumbnail/720x9999%3E/quality/80/format/jpg/interlace/1/ignore-error/1&t=1"
+    class="floating right"
+    alt="Floating Image Right"
+  />
 
   <div class="card">
     <h2>📋 Submit a Meetup</h2>
