@@ -51,21 +51,23 @@
     }
     .info li {
       margin-bottom: 10px;
-      position: relative;
       padding-left: 26px; /* space for checkmark */
-      font-style: normal; /* default normal */
+      position: relative;
+      font-style: normal;
     }
-    /* Checkmark before each list item */
-    .info li::before {
+    .info li span {
+      position: relative;
+      display: inline-block;
+    }
+    .info li span::before {
       content: "✅";
       position: absolute;
-      left: 0;
+      left: -26px;
       top: 0;
       color: #28a745;
-      font-style: normal; /* keep checkmark normal */
+      font-style: normal;
     }
-    /* Italic style for the specific li */
-    .info li.italic {
+    .info li.italic span {
       font-style: italic;
     }
     .info h2 {
@@ -110,12 +112,12 @@
       availability and you're expected to lead the event.
     </p>
     <ul>
-      <li>Tips: </li>
-      <li>Have some photo categories planned ahead, specific to your fandom </li>
-      <li>Arrive a few minutes early at the location. When it's time to start, introduce yourself! </li>
-      <li class="italic">"Hi, my name is *your name* and I will be coordinating the *Insert Fandom here* Meetup today!"</li>
-      <li>Communicate there is a 1- hour time limit on the space, you will be going through some pre-selected photo categories, and there will be time at the end for more!</li>
-      <li>Be kind and include everyone!</li>
+      <li><span>Tips:</span></li>
+      <li><span>Have some photo categories planned ahead, specific to your fandom</span></li>
+      <li><span>Arrive a few minutes early at the location. When it's time to start, introduce yourself!</span></li>
+      <li class="italic"><span>"Hi, my name is *your name* and I will be coordinating the *Insert Fandom here* Meetup today!"</span></li>
+      <li><span>Communicate there is a 1- hour time limit on the space, you will be going through some pre-selected photo categories, and there will be time at the end for more!</span></li>
+      <li><span>Be kind and include everyone!</span></li>
     </ul>
   </div>
 
