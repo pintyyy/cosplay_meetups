@@ -80,6 +80,22 @@
     .info h2 {
       color: #ff6b6b;
     }
+    /* Cute bubble with meetup count */
+    .meetup-count-bubble {
+      max-width: 220px;
+      margin: 0 auto 15px auto;
+      background: #ffd9d9;
+      color: #ff4c4c;
+      font-weight: 600;
+      text-align: center;
+      padding: 10px 20px;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(255, 75, 75, 0.3);
+      font-size: 1.1rem;
+      user-select: none;
+      letter-spacing: 0.05em;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
   </style>
 </head>
 <body>
@@ -113,6 +129,11 @@
   </div>
 
   <div class="card info">
+    <!-- Cute meetup count bubble -->
+    <div class="meetup-count-bubble">
+      Number of meetups submitted: 2
+    </div>
+
     <h2>📌 Meetup Leader Quick Guide</h2>
     <p>
       If you submit a meetup, you're the leader. We'll schedule based on your
