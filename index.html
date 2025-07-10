@@ -8,7 +8,6 @@
       background: #fef9f5;
       font-family: sans-serif;
       margin: 0;
-      /* Add horizontal padding to leave space for floating images */
       padding: 20px 240px;
       position: relative;
     }
@@ -17,7 +16,7 @@
       margin-bottom: 30px;
     }
     .floating {
-      position: fixed; /* fixed so images stay on sides */
+      position: fixed;
       top: 100px;
       border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -30,7 +29,9 @@
     }
     .floating.right {
       right: 20px;
-      width: 220px; /* bigger right image */
+      width: auto;       /* allow original size */
+      max-width: 100%;   /* max width boundary */
+      height: auto;      /* keep aspect ratio */
     }
     @keyframes float {
       0%, 100% { transform: translateY(0); }
@@ -47,7 +48,7 @@
       z-index: 1;
     }
     .card h2 {
-      text-align: center; /* Center card titles */
+      text-align: center;
       color: #ff6b6b;
       margin-top: 0;
     }
