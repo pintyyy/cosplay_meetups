@@ -14,16 +14,18 @@
       text-align: center;
       margin-bottom: 30px;
     }
+    /* Container to hold images in a row */
+    .floating-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 30px;
+    }
     .floating {
-      position: absolute;
       width: 180px;
       border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      animation: float 6s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
+      /* Remove position absolute and animation */
     }
     .card {
       background: white;
@@ -102,19 +104,18 @@
   <h1>✨ AM! 2025 ✨</h1>
   <h1>✨ Submitted Cosplay Meetups ✨</h1>
 
-  <!-- FLOATING IMAGES -->
-  <img
-    src="https://m.media-amazon.com/images/M/MV5BMzE0ZDU1MzQtNTNlYS00YjNlLWE2ODktZmFmNDYzMTBlZTBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-    class="floating"
-    style="top: 80px; left: 60px;"
-    alt="Floating Image Left"
-  />
-  <img
-    src="https://img.tapimg.net/market/images/d7875dc78ff70a4df8ab341800490e19.jpg?imageMogr2/thumbnail/720x9999%3E/quality/80/format/jpg/interlace/1/ignore-error/1&t=1"
-    class="floating"
-    style="top: 140px; right: 60px;"
-    alt="Floating Image Right"
-  />
+  <div class="floating-container">
+    <img
+      src="https://m.media-amazon.com/images/M/MV5BMzE0ZDU1MzQtNTNlYS00YjNlLWE2ODktZmFmNDYzMTBlZTBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+      class="floating"
+      alt="Floating Image Left"
+    />
+    <img
+      src="https://img.tapimg.net/market/images/d7875dc78ff70a4df8ab341800490e19.jpg?imageMogr2/thumbnail/720x9999%3E/quality/80/format/jpg/interlace/1/ignore-error/1&t=1"
+      class="floating"
+      alt="Floating Image Right"
+    />
+  </div>
 
   <!-- Bubble moved outside card -->
   <div class="meetup-count-bubble">
